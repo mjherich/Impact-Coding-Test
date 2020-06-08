@@ -12,7 +12,9 @@ import java.util.stream.Collectors;
  * the delimited list while grouping ranges. At first I was going to write a
  * simple method to output the delimited list as a string but then decided to
  * store the list with a range helper class. This way it would be easier to add
- * additional functionality down the line.
+ * additional functionality down the line. Also, after doing some testing I decided
+ * it would make sense to remove duplicates before processing the list since the
+ * core functionality of the class is to group numbers into a range.
  */
 public class DelimitedList {
     private List<DLRange> delimitedList = new ArrayList<>();
