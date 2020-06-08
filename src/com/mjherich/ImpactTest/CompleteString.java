@@ -2,6 +2,14 @@ package com.mjherich.ImpactTest;
 
 import java.util.HashMap;
 
+/**
+ * Complete String Problem
+ *
+ * The check method takes in a string and returns a boolean whether or
+ * not the string contains all letters A-Z. I'm assuming here that case
+ * does NOT matter, however, if desired you could make it case sensitive
+ * by changing the char code range and removing the str.toLowerCase() call.
+ */
 public class CompleteString {
 
     public static Boolean check(String str) {

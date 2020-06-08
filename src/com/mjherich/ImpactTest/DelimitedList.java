@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Delimited List Problem
+ *
+ * The class constructor accepts in a list of integers, sorts them and populates
+ * the delimited list while grouping ranges. At first I was going to write a
+ * simple method to output the delimited list as a string but then decided to
+ * store the list with a range helper class. This way it would be easier to add
+ * additional functionality down the line.
+ */
 public class DelimitedList {
     private List<DLRange> delimitedList = new ArrayList<>();
 
-    /**
-     * This constructor accepts in a List of integers, sorts them and populates
-     * the delimited list.
-     * @param intList
-     */
     public DelimitedList(List<Integer> intList) {
         // Edge cases
         if (intList.size() == 0) {
