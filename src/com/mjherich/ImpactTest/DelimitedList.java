@@ -3,6 +3,7 @@ package com.mjherich.ImpactTest;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Delimited List Problem
@@ -26,8 +27,13 @@ public class DelimitedList {
             return;
         }
 
+        // Remove duplicates from the input
+        List<Integer> intListNoDupes = intList.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
         // Sort the input
-        Collections.sort(intList);
+        Collections.sort(intListNoDupes);
 
         // Range low, high and boolean
         int rangeLow = 0;
@@ -35,9 +41,9 @@ public class DelimitedList {
         Boolean isBuildingRange = false;
 
         // Main loop
-        for (int i = 0; i < intList.size()-1; i++) {
-            int curNum = intList.get(i);
-            int nextNum = intList.get(i+1);
+        for (int i = 0; i < intListNoDupes.size()-1; i++) {
+            int curNum = intListNoDupes.get(i);
+            int nextNum = intListNoDupes.get(i+1);
 
             // Is nextNumber sequential?
             if (curNum + 1 == nextNum) {
@@ -62,7 +68,7 @@ public class DelimitedList {
         if (isBuildingRange) {
             this.delimitedList.add(new DLRange(rangeLow, rangeHigh));
         } else {
-            int lastNum = intList.get(intList.size()-1);
+            int lastNum = intListNoDupes.get(intListNoDupes.size()-1);
             this.delimitedList.add(new DLRange(lastNum, lastNum));
         }
     }

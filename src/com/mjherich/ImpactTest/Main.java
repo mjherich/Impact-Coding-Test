@@ -24,7 +24,7 @@ public class Main {
         JButton btn1 = new JButton("Create Delimited List");
 
         JLabel output1 = new JLabel();
-        output1.setPreferredSize(new Dimension(300, 40));
+        output1.setPreferredSize(new Dimension(500, 40));
 
         btn1.addActionListener(event -> {
             // Parse input
@@ -59,7 +59,7 @@ public class Main {
         JButton btn2 = new JButton("Convert");
 
         JLabel output2 = new JLabel();
-        output2.setPreferredSize(new Dimension(300, 40));
+        output2.setPreferredSize(new Dimension(500, 40));
 
         btn2.addActionListener(event -> {
             GoodString gs = new GoodString(input2.getText());
@@ -80,7 +80,7 @@ public class Main {
         JButton btn3 = new JButton("Find Duplicates");
 
         JLabel output3 = new JLabel();
-        output3.setPreferredSize(new Dimension(300, 40));
+        output3.setPreferredSize(new Dimension(500, 40));
 
         btn3.addActionListener(event -> {
             // Parse input
@@ -114,7 +114,7 @@ public class Main {
         JButton btn4 = new JButton("Is Complete String?");
 
         JLabel output4 = new JLabel();
-        output4.setPreferredSize(new Dimension(300, 40));
+        output4.setPreferredSize(new Dimension(500, 40));
 
         btn4.addActionListener(event -> {
             Boolean isComplete = CompleteString.check(input4.getText());
@@ -132,8 +132,7 @@ public class Main {
         panel4.add(output4);
 
         JFrame gui = new JFrame("Matt Herich - Impact Java Test");
-        gui.setPreferredSize(new Dimension(1100, 400));
-        gui.setResizable(false);
+        gui.setPreferredSize(new Dimension(1400, 500));
         JPanel mainGUI = new JPanel();
         mainGUI.setLayout(new BoxLayout(mainGUI, BoxLayout.Y_AXIS));
         mainGUI.add(panel1);
@@ -155,7 +154,7 @@ public class Main {
         mainGUI.setAlignmentX(Component.RIGHT_ALIGNMENT);
         gui.add(mainGUI);
         gui.pack();
-        gui.setLocationRelativeTo(null); // Centering the screen
+//        gui.setLocationRelativeTo(null); // Centering the screen
 
         return gui;
     }

@@ -37,4 +37,11 @@ class DelimitedListTest {
         DelimitedList dl5 = new DelimitedList(inputList5);
         assertEquals("", dl5.toString());
     }
+
+    @Test
+    public void handlesDuplicateValues() {
+        List<Integer> inputList1 = Arrays.asList(1,2,-7,2,3,0,10,1,-9,-10,10,-7);
+        DelimitedList dl3 = new DelimitedList(inputList1);
+        assertEquals("-10:-9, -7, 0:3, 10", dl3.toString());
+    }
 }
