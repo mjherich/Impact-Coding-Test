@@ -6,6 +6,8 @@ I also decided to get some practice with the Java swing and awt frameworks for c
 
 ### How to use the GUI
 
+Start by running `java -jar ImpactCodingTest.jar` in the `root` of the project.
+
 * **Delimited List** accepts a comma separated list of integers with NO spaces.
 * **Good Strings** accepts any old string.
 * **Find Duplicate Elements** accepts a comma separated list of integers with NO spaces.
